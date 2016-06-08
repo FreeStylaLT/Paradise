@@ -627,7 +627,7 @@ var/list/uplink_items = list()
 	cost = 12
 
 /datum/uplink_item/stealthy_weapons/martialarts
-	name = "Martial Arts Scroll"
+	name = "Sleeping Carp Kit"
 	desc = "A boxed kit containing Sleeping Carp scroll and a hachimaki. This scroll contains the secrets of an ancient martial arts technique. You will master unarmed combat, \
 			deflecting all ranged weapon fire, but you also refuse to use dishonorable ranged weaponry. You also get a Hachimaki which looks rad."
 	reference = "SCS"
