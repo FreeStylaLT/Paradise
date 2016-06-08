@@ -89,6 +89,13 @@
 	item_state = "greenbandana"
 	flags_inv = 0
 
+/obj/item/clothing/head/hachimaki
+	name = "Hachimaki"
+	desc = "It's a symbol of art, dedication and kickass."
+	icon_state = "hachimaki"
+	item_state = "hachimaki"
+	flags_inv = 0
+
 /obj/item/clothing/head/justice
 	name = "justice hat"
 	desc = "Fight for what's righteous!"

@@ -174,6 +174,14 @@
 		new /obj/item/weapon/reagent_containers/syringe/bioterror(src)
 		return
 
+/obj/item/weapon/storage/box/syndie_kit/syndiefu
+	name = "Boxed Sleeping Carp Badassery"
+
+	New()
+		..()
+		new /obj/item/weapon/sleeping_carp_scroll(src)
+		new /obj/item/clothing/head/hachimaki(src)
+
 /obj/item/weapon/storage/box/syndie_kit/caneshotgun
 	name = "cane gun kit"
 
