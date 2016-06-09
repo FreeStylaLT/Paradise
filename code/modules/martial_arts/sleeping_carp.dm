@@ -43,7 +43,7 @@
 		D.apply_damage(5, BRUTE, pick("l_arm", "r_arm"))
 		D.Stun(3)
 		if(prob(60))
-			A.say(pick("WRISTY TWIRLY!", "WE FIGHT LIKE MEN!", "YOU DISHONOR YOURSELF!","POHYAH!", "WHERE IS YOUR BATON NOW?", "SAY UNCLE!"))
+			A.say(pick("WRISTY TWIRLY!", "WE FIGHT LIKE MEN!", "YOU DISHONOR YOURSELF!", "POHYAH!", "WHERE IS YOUR BATON NOW?", "SAY UNCLE!"))
 		return 1
 	return basic_hit(A,D)
 
@@ -56,7 +56,7 @@
 		D.Weaken(4)
 		playsound(get_turf(D), 'sound/weapons/punch1.ogg', 50, 1, -1)
 		if(prob(80))
-			A.say(pick("SURRPRIZU!","BACK STRIKE!","WOPAH!"))
+			A.say(pick("SURRPRIZU!","BACK STRIKE!","WOPAH!", "Never turn your back to the enemy!"))
 		return 1
 	return basic_hit(A,D)
 
@@ -70,7 +70,7 @@
 		D.Stun(2)
 		playsound(get_turf(D), 'sound/weapons/punch1.ogg', 50, 1, -1)
 		if(prob(80))
-			A.say(pick("HWOP!","KUH!","YAKUUH!","KYUH!", "KNEESTRIKE!"))
+			A.say(pick("HWOP!", "KUH!", "YAKUUH!", "KYUH!", "KNEESTRIKE!"))
 		return 1
 	return basic_hit(A,D)
 
@@ -84,7 +84,7 @@
 		playsound(get_turf(D), 'sound/weapons/punch1.ogg', 50, 1, -1)
 		D.Stun(4)
 		if(prob(60))
-			A.say(pick("OOHYOO!","OOPYAH!","HYOOAA!","WOOAAA!", "SHURYUKICK!"))
+			A.say(pick("OOHYOO!", "OOPYAH!", "HYOOAA!", "WOOAAA!", "SHURYUKICK!", "HIYAH!"))
 		return 1
 	return basic_hit(A,D)
 
@@ -94,7 +94,7 @@
 		D.visible_message("<span class='warning'>[A] elbow drops [D]!</span>", \
 						  "<span class='userdanger'>[A] piledrives you with their elbow!</span>")
 		if(prob(80))
-			A.say(pick("BANZAIII!", "KIYAAAA!", "RYUU GA WAGA TEKI WO KURAU!", "OMAE WA MOU SHINDEIRU!", "YOU CAN'T SEE ME!", "MY TIME IS NOW!", "RKO OUTTA NOWHERE!"))
+			A.say(pick("BANZAIII!", "KIYAAAA!", "RYUU GA WAGA TEKI WO KURAU!", "OMAE WA MOU SHINDEIRU!", "YOU CAN'T SEE ME!", "MY TIME IS NOW!", "YOU'RRRE FIRRREED!", "You will rest... in... peace.", "WHAT'CHA GONNA DO, BROTHER?", "COWABUNGA"))
 		if(D.stat)
 			D.death() //FINISH HIM!
 		D.apply_damage(50, BRUTE, "chest")
