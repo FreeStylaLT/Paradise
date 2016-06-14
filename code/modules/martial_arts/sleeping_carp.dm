@@ -56,7 +56,7 @@
 		D.Weaken(4)
 		playsound(get_turf(D), 'sound/weapons/punch1.ogg', 50, 1, -1)
 		if(prob(80))
-			A.say(pick("SURRPRIZU!","BACK STRIKE!","WOPAH!", "Never turn your back to the enemy!"))
+			A.say(pick("SURRPRIZU!","BACK STRIKE!","WOPAH!", "WATAAH", "ZOTA!", "Never turn your back to the enemy!"))
 		return 1
 	return basic_hit(A,D)
 
@@ -94,7 +94,7 @@
 		D.visible_message("<span class='warning'>[A] elbow drops [D]!</span>", \
 						  "<span class='userdanger'>[A] piledrives you with their elbow!</span>")
 		if(prob(80))
-			A.say(pick("BANZAIII!", "KIYAAAA!", "RYUU GA WAGA TEKI WO KURAU!", "OMAE WA MOU SHINDEIRU!", "YOU CAN'T SEE ME!", "MY TIME IS NOW!", "YOU'RRRE FIRRREED!", "You will rest... in... peace.", "WHAT'CHA GONNA DO, BROTHER?", "COWABUNGA"))
+			A.say(pick("BANZAIII!", "KIYAAAA!", "RYUU GA WAGA TEKI WO KURAU!", "OMAE WA MOU SHINDEIRU!", "YOU CAN'T SEE ME!", "MY TIME IS NOW!", "COWABUNGA"))
 		if(D.stat)
 			D.death() //FINISH HIM!
 		D.apply_damage(50, BRUTE, "chest")
@@ -147,3 +147,21 @@
 	to_chat(usr, "<span class='notice'>Stomach Knee</span>: Grab Harm. Knocks the wind out of opponent and stuns.")
 	to_chat(usr, "<span class='notice'>Head Kick</span>: Disarm Harm Harm. Decent damage, forces opponent to drop item in hand.")
 	to_chat(usr, "<span class='notice'>Elbow Drop</span>: Harm Disarm Harm Disarm Harm. Opponent must be on the ground. Deals huge damage, instantly kills anyone in critical condition.")
+
+/mob/living/carbon/human/proc/sleeping_carp_dash()
+	set name = "Dash"
+	set desc = "You dash."
+	set category = "Sleeping Carp"
+
+	for(var/i=0, i<4, i++)
+		if(usr.dir == 1)	//dashes backwards from where you're facing
+			step(usr, 2)	//no there's no other fucking way to do this
+		if(usr.dir == 2)	//because user.dir is always positive
+			step(usr, 1)	//I would have just made it multiply it by -1 but no that doesn't work
+		if(usr.dir == 4)	//fucking byond fufsfd
+			step(usr, 8)
+		if(usr.dir == 8)
+			step(usr, 4)
+		if(i < 1) usr.pixel_y += 2
+		else usr.pixel_y -= 2
+		sleep(1)
